@@ -5,3 +5,10 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0",
     DEBUG: bool = false
 
+    # DB PART
+    DB_HOST: str,
+    DB_PORT: int,
+    DB_USER: str,
+    DB_PASSWORD: str,
+    DB_NAME: str 
+
