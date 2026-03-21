@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from app.core.config import settings
 
 engine = create_engine(
-    settings.DATABASE_URL,
+    settings.database_url,
     pool_pre_ping=True,   # sends "SELECT 1" before using a connection
                           # prevents "MySQL server has gone away" errors
     pool_size=10,         # 10 connections always kept alive in the pool

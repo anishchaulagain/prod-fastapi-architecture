@@ -4,13 +4,13 @@ from functools import lru_cache
 class Settings(BaseSettings):
     APP_NAME: str = "AI Brand Fedility",
     APP_VERSION: str = "1.0.0",
-    DEBUG: bool = false
+    DEBUG: bool = False
 
     # DB PART
-    DB_HOST: str,
-    DB_PORT: int,
-    DB_USER: str,
-    DB_PASSWORD: str,
+    DB_HOST: str
+    DB_PORT: int
+    DB_USER: str
+    DB_PASSWORD: str
     DB_NAME: str 
 
     #JWT PART
@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
     @property
-    def DATABASE_URL(self) -> str:
+    def database_url(self) -> str:
         return (
             f"mysql+pymysql://{self.DB_USER}:{self.DB_PASSWORD}"
             f"@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
