@@ -1,5 +1,5 @@
 from sqlalchemy.orm import DeclarativeBase, declared_attr
-
+import re
 
 class Base(DeclarativeBase):
     @declared_attr.directive
